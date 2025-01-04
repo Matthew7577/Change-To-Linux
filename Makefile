@@ -26,7 +26,7 @@ $(RES_OBJ): $(RESOURCES)
 
 # Add this rule to create the bin directory if it doesn't exist
 bin:
-	mkdir -p bin
+	mkdir bin
 
 # Clean the build files
 clean:
