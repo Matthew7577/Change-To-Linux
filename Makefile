@@ -14,7 +14,7 @@ RESOURCES = $(RES_DIR)/tux.rc
 RES_OBJ = $(RES_DIR)/tux.res
 
 # Default target
-all: $(TARGET)
+all: bin $(TARGET)
 
 # Compile the program
 $(TARGET): $(SOURCES) $(RES_OBJ)
@@ -23,6 +23,10 @@ $(TARGET): $(SOURCES) $(RES_OBJ)
 # Convert the .rc file to .res file
 $(RES_OBJ): $(RESOURCES)
 	$(WINDRES) "$(RESOURCES)" -O coff -o "$(RES_OBJ)"
+
+# Add this rule to create the bin directory if it doesn't exist
+bin:
+	mkdir -p bin
 
 # Clean the build files
 clean:
