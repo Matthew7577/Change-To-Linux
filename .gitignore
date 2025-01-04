@@ -33,4 +33,4 @@
 
 *.res
 
-bin/
+bin/*.exe
