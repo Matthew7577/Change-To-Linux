@@ -34,3 +34,4 @@
 *.res
 
 bin/*.exe
+.vscode/
